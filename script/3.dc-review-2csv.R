@@ -2,7 +2,7 @@ library(tidyverse)
 library(stringr)
 library(lubridate)
 
-medline <- data_frame(text = read_lines('dc-review.text.txt')) %>%
+medline <- data_frame(text = read_lines('dc-review.txt')) %>%
     filter(text != '') %>%
     mutate(major_line = map_lgl(text, ~str_detect(.x, '....-'))) %>%
     mutate(major_line_id = cumsum(major_line)) %>%
@@ -39,6 +39,8 @@ medline_author = medline %>%
            contain_email = str_detect(value, '\\w@\\w')) %>%
     mutate(email = str_replace(email, '\\.$', '')) %>%
     filter(!(field == "AD" & !contain_email)) %>%
+    # when an author has multiple email addresses, use the first one
+    filter(!(field == "AD" & lag(field == "AD"))) %>%
     mutate(value = if_else(field == 'AD', email, value)) %>%
     select(-c(email, contain_email)) %>%
     nest() %>%
