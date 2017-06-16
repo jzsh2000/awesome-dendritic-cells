@@ -68,3 +68,28 @@ medline.wide = medline %>%
     mutate(EDAT = ymd(str_extract(EDAT, '^[^ ]*'))) %>%
     left_join(medline_author %>% select(-author_list),
               by = 'record')
+
+author_pool = sort(unique(medline.wide$name))
+medline_df = medline.wide %>%
+    mutate(name_completion = map_chr(name, function(name) {
+        if (is.na(name)) return(NA_character_)
+        name_part = str_split(name, ' ')[[1]]
+        if (all(str_length(name_part) > 1)) {
+            return(name)
+        } else {
+            query_pattern = paste(sapply(name_part, function(part) {
+                ifelse(str_length(part) > 1, part,
+                       paste0(part, '[-A-Za-z ]*'))
+            }), collapse = ' ')
+            search_res = str_subset(author_pool, query_pattern)
+            return(search_res[which.max(str_length(search_res))])
+        }
+    })) %>%
+    # colnames of `journal_df` : "JID" "TA"  "JT"  "n"
+    left_join(journal_df, by = 'JID') %>%
+    select(record, EDAT, JT, TI, name, name_completion, address, citedin) %>%
+    arrange(EDAT) %>%
+    replace_na(list(name = '-', name_completion = '-', address = '-')) %>%
+    rename(date = EDAT, journal_title = JT, title = TI)
+
+medline_df %>% write_csv('dc-review.csv')
