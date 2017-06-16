@@ -81,7 +81,8 @@ medline_df = medline.wide %>%
                 ifelse(str_length(part) > 1, part,
                        paste0(part, '[-A-Za-z ]*'))
             }), collapse = ' ')
-            search_res = str_subset(author_pool, query_pattern)
+            search_res = str_subset(author_pool,
+                                    regex(query_pattern, ignore.case = TRUE))
             return(search_res[which.max(str_length(search_res))])
         }
     })) %>%
@@ -93,3 +94,25 @@ medline_df = medline.wide %>%
     rename(date = EDAT, journal_title = JT, title = TI)
 
 medline_df %>% write_csv('dc-review.csv')
+
+medline_df %>%
+    group_by(name_completion) %>%
+    summarise(total_reviews = n(), total_citedin = sum(citedin),
+              year_start = min(year(date)),
+              year_last = max(year(date))) %>%
+    arrange(desc(total_reviews)) %>%
+    rename(name = name_completion) %>%
+    mutate(name = map_chr(name, function(x) {
+        x_part = as.vector(str_split_fixed(x, ', ', 2))
+        paste(rev(x_part), collapse = ' ')
+        })) %>%
+    write_csv('dc-review.author.csv')
+
+medline_df %>%
+    group_by(journal_title) %>%
+    summarise(total_reviews = n(), total_citedin = sum(citedin),
+              year_start = min(year(date)),
+              year_last = max(year(date))) %>%
+    arrange(desc(total_reviews)) %>%
+    write_csv('dc-review.journal.csv')
+g
