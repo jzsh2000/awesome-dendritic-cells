@@ -30,7 +30,7 @@ journal_df <- medline %>%
 # find corresponding author
 # if no email addresses provided: last author
 # if all authors have email addressed provided: last author
-# else: the author has email address
+# else: the last author has email address
 medline_author = medline %>%
     filter(field %in% c('FAU', 'AD')) %>%
     group_by(record) %>%
