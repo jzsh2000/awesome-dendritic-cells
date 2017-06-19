@@ -93,7 +93,7 @@ medline_df = medline.wide %>%
     replace_na(list(name = '-', name_completion = '-', address = '-')) %>%
     rename(date = EDAT, journal_title = JT, title = TI)
 
-medline_df %>% write_csv('dc-review.csv')
+medline_df %>% write_csv('output/dc-review.csv')
 
 medline_df %>%
     group_by(name_completion) %>%
@@ -106,7 +106,7 @@ medline_df %>%
         x_part = as.vector(str_split_fixed(x, ', ', 2))
         paste(rev(x_part), collapse = ' ')
         })) %>%
-    write_csv('dc-review.author.csv')
+    write_csv('output/dc-review.author.csv')
 
 medline_df %>%
     group_by(journal_title) %>%
@@ -114,5 +114,4 @@ medline_df %>%
               year_start = min(year(date)),
               year_last = max(year(date))) %>%
     arrange(desc(total_reviews)) %>%
-    write_csv('dc-review.journal.csv')
-g
+    write_csv('output/dc-review.journal.csv')
