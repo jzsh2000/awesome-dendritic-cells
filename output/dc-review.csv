@@ -475,7 +475,7 @@ record,date,journal_title,title,name,name_completion,address,citedin
 7556711,1995-01-01,"Eye (London, England)",Pathways of dendritic cell differentiation and development.,"Roake, J A","Roake, J A",-,2
 7556973,1995-01-01,Digestion,Structure and role of Langerhans' cells in the human oesophageal epithelium.,"Potet, F","Potet, F",-,2
 7587345,1995-01-01,Current topics in microbiology and immunology,A theory of follicular dendritic cell origin.,"Tew, J G","Tew, J G",-,3
-7587346,1995-01-01,Current topics in microbiology and immunology,Regulation of human B cell activation by follicular dendritic cell and T cell signals.,"Liu, Y J","Liu, Y J",-,0
+7587346,1995-01-01,Current topics in microbiology and immunology,Regulation of human B cell activation by follicular dendritic cell and T cell signals.,"Liu, Y J","Liu, Yong-Jun",-,0
 7587348,1995-01-01,Current topics in microbiology and immunology,Follicular dendritic cells initiate and maintain infection of the germinal centers by human immunodeficiency virus.,"Racz, P","Racz, P",-,13
 7587349,1995-01-01,Current topics in microbiology and immunology,Follicular dendritic cells: origin and function.,"Bouzahzah, F","Bouzahzah, F",-,7
 7587350,1995-01-01,Current topics in microbiology and immunology,Follicular dendritic cells and infection by human immunodeficiency virus type,"Goudsmit, J","Goudsmit, J",-,0
@@ -952,7 +952,7 @@ record,date,journal_title,title,name,name_completion,address,citedin
 10689135,2000-02-26,Vaccine,Antigen receptors and dendritic cells.,"Lebecque, S","Lebecque, S",-,1
 10689778,2000-02-26,Current topics in microbiology and immunology,Macrophage activation by immunostimulatory DNA.,"Stacey, K J","Stacey, K J",K.Stacey@cmcb.uq.edu.au,6
 10689779,2000-02-26,Current topics in microbiology and immunology,Consequences of bacterial CpG DNA-driven activation of antigen-presenting cells.,"Lipford, G B","Lipford, G B",-,2
-10695720,2000-03-01,Journal of neuroimmunology,Dendritic cells in experimental allergic encephalomyelitis and multiple sclerosis.,"Xiao, B G","Xiao, B G",-,4
+10695720,2000-03-01,Journal of neuroimmunology,Dendritic cells in experimental allergic encephalomyelitis and multiple sclerosis.,"Xiao, B G","Xiao, Bao-Guo",-,4
 10702719,2000-03-07,Intervirology,Human cytomegalovirus infection of immature dendritic cells and macrophages.,"Sinzger, C","Sinzger, C",-,9
 10712940,2000-03-14,Current opinion in immunology,Self-antigen presentation by thymic stromal cells: a subtle division of labor.,"Klein, L","Klein, L",ludger_klein@dcfi.harvard.edu,19
 10712942,2000-03-14,Current opinion in immunology,To be or not to be a pro-T?,"Di Santo, J P","Di Santo, James P",disanto@pasteur.fr,3
@@ -1093,7 +1093,7 @@ record,date,journal_title,title,name,name_completion,address,citedin
 11227210,2001-03-03,Apoptosis : an international journal on programmed cell death,"Apoptosis, cross-presentation, and the fate of the antigen specific immune response.","Bellone, M","Bellone, Matteo",bellone.matteo@hsr.it,3
 11228416,2001-03-03,Current opinion in immunology,T cell fate specification and alphabeta/gammadelta lineage commitment.,"Wilson, A","Wilson, A",-,6
 11232293,2001-03-10,Cold Spring Harbor symposia on quantitative biology,Three signals and a master switch in the regulation of T-cell immunity.,"Lanzavecchia, A","Lanzavecchia, Antonio",-,2
-11240009,2001-03-10,Journal of neuroimmunology,Vaccination with autologous dendritic cells: from experimental autoimmune encephalomyelitis to multiple sclerosis.,"Xiao, B G","Xiao, B G",-,4
+11240009,2001-03-10,Journal of neuroimmunology,Vaccination with autologous dendritic cells: from experimental autoimmune encephalomyelitis to multiple sclerosis.,"Xiao, B G","Xiao, Bao-Guo",-,4
 11242749,2001-03-13,Journal of the Royal College of Surgeons of Edinburgh,Dendritic cells (I): Biological functions.,"Eremin, O","Eremin, O",-,8
 11244029,2001-03-13,Annual review of immunology,In vivo activation of antigen-specific CD4 T cells.,"Jenkins, M K","Jenkins, Marc K",marcj@mail.ahc.umn.edu,117
 11244030,2001-03-13,Annual review of immunology,"Cross-presentation, dendritic cells, tolerance and immunity.","Heath, W R","Heath, William R",heath@wehi.edu.au,172
@@ -1169,7 +1169,7 @@ record,date,journal_title,title,name,name_completion,address,citedin
 11425639,2001-06-27,Trends in molecular medicine,Vaccines for colorectal cancer.,"Choti, M A","Choti, M A",-,1
 11426654,2001-06-28,Oncogene,Dendritic cell vaccination for cancer therapy.,"Nestle, F O","Nestle, Frank O",-,7
 11429324,2001-06-29,Trends in immunology,Dendritic cells as a tool to induce anergic and regulatory T cells.,"Enk, A H","Enk, Alexander H",-,58
-11429541,2001-06-29,Nature immunology,"Dendritic cell lineage, plasticity and cross-regulation.","Liu, Y J","Liu, Y J",yliu@dnax.org,81
+11429541,2001-06-29,Nature immunology,"Dendritic cell lineage, plasticity and cross-regulation.","Liu, Y J","Liu, Yong-Jun",yliu@dnax.org,81
 11432208,2001-07-04,Advances in immunology,Chemokines in immunity.,"Nomiyama, H","Nomiyama, H",-,65
 11443887,2001-07-11,Current topics in pathology. Ergebnisse der Pathologie,Clinicopathological differential diagnosis of drug-induced toxic epidermal,"Pierard, G E","Pierard, Gerald E",-,1
 11444391,2001-07-11,Immunologic research,VEGF as a mediator of tumor-associated immunodeficiency.,"Carbone, D P","Carbone, David P",-,49
@@ -1214,7 +1214,7 @@ record,date,journal_title,title,name,name_completion,address,citedin
 11502167,2001-08-15,Seminars in immunology,Potential of tolerogenic dendritic cells for transplantation.,"Morelli, A E","Morelli, Adrian E",morelli@imap.pitt.edu,7
 11505974,2001-08-17,Advances in experimental medicine and biology,"Autoimmune lymphoproliferative syndrome: types I, II and beyond.","Lenardo, M J","Lenardo, M J",-,2
 11509172,2001-08-18,Cell,Dendritic cells: specialized and regulated antigen processing machines.,"Mellman, I","Mellman, Ira",ira.mellman@yale.edu,446
-11509173,2001-08-18,Cell,"Dendritic cell subsets and lineages, and their functions in innate and adaptive immunity.","Liu, Y J","Liu, Y J",-,161
+11509173,2001-08-18,Cell,"Dendritic cell subsets and lineages, and their functions in innate and adaptive immunity.","Liu, Y J","Liu, Yong-Jun",-,161
 11509174,2001-08-18,Cell,Regulation of T cell immunity by dendritic cells.,"Lanzavecchia, A","Lanzavecchia, Antonio",lanzavecchia@irb.unisi.ch,176
 11509176,2001-08-18,Cell,Dendritic cells as vectors for therapy.,"Banchereau, J","Banchereau, Jacques",j.banchereau@baylordallas.edu,59
 11509880,2001-08-18,Intervirology,Dendritic cells and chronic hepatitis virus carriers.,"Hino, O","Hino, O",-,7
@@ -1357,7 +1357,7 @@ record,date,journal_title,title,name,name_completion,address,citedin
 11892684,2002-03-15,International journal of medical microbiology : IJMM,Effects of the adjuvant cholera toxin on dendritic cells: stimulatory and inhibitory signals that result in the amplification of immune responses.,"De Magistris, M Teresa","De Magistris, M Teresa",-,6
 11897563,2002-03-19,Frontiers in bioscience : a journal and virtual library,Control of myeloid dendritic cell differentiation and function by CD1d-restricted (NK) T cells.,"Wilson, S Brian","Wilson, S Brian",-,1
 11897572,2002-03-19,Frontiers in bioscience : a journal and virtual library,Immunotherapy of human papillomavirus-associated malignancies and the challenges ,"Chen, Lieping","Chen, Lieping",-,0
-11899090,2002-03-20,Current molecular medicine,"Continuing education of the immune system--dendritic cells, immune regulation and tolerance.","Huang, F P","Huang, F P",fphuang@hkucc.hku.hk,5
+11899090,2002-03-20,Current molecular medicine,"Continuing education of the immune system--dendritic cells, immune regulation and tolerance.","Huang, F P","Huang, Fang-Ping",fphuang@hkucc.hku.hk,5
 11899091,2002-03-20,Current molecular medicine,Role of the mannose receptor in the immune response.,"Apostolopoulos, V","Apostolopoulos, Vasso",v.apostolopoulos@ari.unimelb.edu.au,33
 11899283,2002-03-20,Current allergy reports,Atopic eczema and allergy.,"Ring, J","Ring, J",Johannes.Ring@lrz.tum.de,0
 11900990,2002-03-20,Cytokine & growth factor reviews,Chemokines in cancer.,"Vicari, Alain P","Vicari, Alain P",alain.vicari@spcorp.com,65
@@ -2661,7 +2661,7 @@ record,date,journal_title,title,name,name_completion,address,citedin
 16289002,2005-11-18,Cardiovascular research,Mycophenolate mofetil (MMF): firing at the atherosclerotic plaque from different  angles?,"Stroes, Erik S G","Stroes, Erik S G",-,9
 16291384,2005-11-18,Surgery,Dendritic cells as therapeutic adjuncts in surgical disease.,"McCarter, Martin D","McCarter, Martin D",-,0
 16295136,2005-11-22,Journal der Deutschen Dermatologischen Gesellschaft = Journal of the German Society of Dermatology : JDDG,The role of dendritic cells during infection.,"Kolb-Maurer, Annette","Kolb-Maurer, Annette",ankolb@biozentrum.uni-wuerzburg.de,2
-16297150,2005-11-22,Clinical and experimental immunology,Dancing with the enemy: the interplay of herpes simplex virus with dendritic cells.,"Peng, W M","Peng, W M",-,8
+16297150,2005-11-22,Clinical and experimental immunology,Dancing with the enemy: the interplay of herpes simplex virus with dendritic cells.,"Peng, W M","Peng, Wen-Ming",-,8
 16297771,2005-11-22,The Journal of heart and lung transplantation : the official publication of the International Society for Heart Transplantation,Role of Toll-like receptor-driven innate immunity in thoracic organ transplantation.,"Palmer, Scott M","Palmer, Scott M",-,3
 16301609,2005-11-23,"Journal of immunology (Baltimore, Md. : 1950)",Granulocyte colony-stimulating factor: a novel mediator of T cell tolerance.,"Rutella, Sergio","Rutella, Sergio",srutella@rm.unicatt.it,36
 16302992,2005-11-24,American journal of transplantation : official journal of the American Society of Transplantation and the American Society of Transplant Surgeons,Dendritic cells: tools and targets for transplant tolerance.,"Thomson, A W","Thomson, Angus W",-,10

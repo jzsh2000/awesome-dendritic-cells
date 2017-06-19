@@ -74,15 +74,28 @@ medline_df = medline.wide %>%
     mutate(name_completion = map_chr(name, function(name) {
         if (is.na(name)) return(NA_character_)
         name_part = str_split(name, ' ')[[1]]
+        # there is a comma (,) after family name
+        family_name_span = which(str_detect(name_part, ','))
+
         if (all(str_length(name_part) > 1)) {
-            return(name)
+            return(str_subset(author_pool, regex(name, ignore.case = TRUE))[1])
         } else {
-            query_pattern = paste(sapply(name_part, function(part) {
-                ifelse(str_length(part) > 1, part,
-                       paste0(part, '[-A-Za-z ]*'))
-            }), collapse = ' ')
-            search_res = str_subset(author_pool,
-                                    regex(query_pattern, ignore.case = TRUE))
+            # find true author name:
+            # `Liu, Yong-Jun` and `Liu, Y J` are the same author
+            # `Steinman, R M` and `Steinman, Ralph M` are the same author
+            query_pattern = str_trim(
+                paste(paste(name_part[seq(family_name_span)],
+                            collapse = ' '),
+                      paste(sapply(name_part[-seq(family_name_span)],
+                                   function(part) {
+                                       ifelse(str_length(part) > 1,
+                                              paste0(part, ' '),
+                                              paste0(part, '[-a-z ]*'))
+                                   }), collapse = ''),
+                      collapse = ' ')
+                )
+            # print(query_pattern)
+            search_res = str_subset(author_pool, regex(query_pattern))
             return(search_res[which.max(str_length(search_res))])
         }
     })) %>%
@@ -97,9 +110,14 @@ medline_df %>% write_csv('output/dc-review.csv')
 
 medline_df %>%
     group_by(name_completion) %>%
-    summarise(total_reviews = n(), total_citedin = sum(citedin),
-              year_start = min(year(date)),
-              year_last = max(year(date))) %>%
+    summarise(total_reviews = n(),
+              total_citedin = sum(citedin),
+              max_citedin = max(citedin),
+              max_citedin_pmid = record[which.max(citedin)],
+              max_citedin_year = as.character(year(date)[which.max(citedin)]),
+              year_start = as.character(min(year(date))),
+              year_last = as.character(max(year(date)))
+              ) %>%
     arrange(desc(total_reviews)) %>%
     rename(name = name_completion) %>%
     mutate(name = map_chr(name, function(x) {
@@ -110,8 +128,13 @@ medline_df %>%
 
 medline_df %>%
     group_by(journal_title) %>%
-    summarise(total_reviews = n(), total_citedin = sum(citedin),
-              year_start = min(year(date)),
-              year_last = max(year(date))) %>%
+    summarise(total_reviews = n(),
+              total_citedin = sum(citedin),
+              max_citedin = max(citedin),
+              max_citedin_pmid = record[which.max(citedin)],
+              max_citedin_year = as.character(year(date)[which.max(citedin)]),
+              year_start = as.character(min(year(date))),
+              year_last = as.character(max(year(date)))
+              ) %>%
     arrange(desc(total_reviews)) %>%
     write_csv('output/dc-review.journal.csv')
